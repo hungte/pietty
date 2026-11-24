@@ -1,0 +1,50 @@
+---
+layout: default
+title: DOWNLOAD
+permalink: /download.html
+---
+{% comment %}
+  Release list is generated from GitHub Releases of the repository
+  (site.github.releases, provided by jekyll-github-metadata on GitHub Pages).
+  It is refreshed whenever the site is rebuilt; see README.md.
+{% endcomment %}
+<section class="title">
+  <h1>PieTTY Releases</h1>
+</section>
+
+{%- assign releases = site.github.releases | where: "draft", false -%}
+{%- assign legacy_inserted = false -%}
+{%- for r in releases -%}
+  {%- if r.prerelease -%}{%- continue -%}{%- endif -%}
+  {%- if r.tag_name == "0.3" and legacy_inserted == false -%}
+    {%- capture legacy %}{% include legacy-03x.md %}{% endcapture -%}
+    {{ legacy | markdownify }}
+    {%- assign legacy_inserted = true -%}
+  {%- endif %}
+{% include release.html release=r %}
+{%- endfor %}
+
+{%- assign old = releases | where: "tag_name", "OldReleases" | first -%}
+{%- if old %}
+<section class="emph1 release-head" id="legacy">
+  <h2>Legacy Non-PieTTY Builds</h2>
+  {%- if old.author %}
+  <p>Released by: <a href="{{ old.author.html_url }}">{{ old.author.login }}</a></p>
+  {%- endif %}
+</section>
+<section class="emph2 release-notes">
+  {{ old.body | replace: "\r\n", "\n" | markdownify }}
+  <h3>Downloads</h3>
+  <ul class="assets">
+    {%- for a in old.assets %}
+    <li><a href="{{ a.browser_download_url }}">{{ a.name }}</a></li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if releases.size == 0 %}
+<section class="plain">
+  <p>See <a href="https://github.com/{{ site.repository }}/releases">GitHub Releases</a>.</p>
+</section>
+{%- endif %}

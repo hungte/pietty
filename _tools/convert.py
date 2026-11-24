@@ -23,7 +23,7 @@ IMG_DIR = os.path.join(ROOT, 'assets', 'images')
 PAGES = [
     # (raw name, output file, title, permalink)
     ('home', 'index.md', 'HOME', '/'),
-    ('download', 'download.md', 'DOWNLOAD', '/download.html'),
+    # download.html is now generated from GitHub Releases; not converted.
     ('faq', 'faq.md', 'FAQ', '/faq.html'),
 ]
 

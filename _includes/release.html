@@ -1,0 +1,40 @@
+{% comment %}
+  One GitHub Release on the download page.
+  Parameter: include.release (an item of site.github.releases).
+  Release notes written as "## English ... ## 繁體中文 ..." are shown in two
+  columns; anything else is shown as is.
+{% endcomment %}
+{%- assign r = include.release -%}
+{%- assign body = r.body | default: "" | replace: "\r\n", "\n" -%}
+{%- assign zh_marker = "## 繁體中文" -%}
+<section class="emph1 release-head" id="{{ r.tag_name | slugify }}">
+  <h3><a href="{{ r.html_url }}">{{ r.name | default: r.tag_name }}</a></h3>
+  {%- unless body contains "Release date" %}
+  <p>Release date: {{ r.published_at | date: "%b %d %Y" }}</p>
+  {%- endunless %}
+  {%- if r.author %}
+  <p>Released by: <a href="{{ r.author.html_url }}">{{ r.author.login }}</a></p>
+  {%- endif %}
+  {%- if r.assets.size > 0 %}
+  <ul class="assets">
+    {%- for a in r.assets %}
+    <li><a href="{{ a.browser_download_url }}">{{ a.name }}</a></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</section>
+{%- if body != "" %}
+<section class="plain release-notes">
+  {%- if body contains zh_marker %}
+  {%- assign parts = body | split: zh_marker -%}
+  {%- assign en = parts[0] | replace_first: "## English", "" -%}
+  {%- assign zh = body | remove_first: parts[0] | remove_first: zh_marker -%}
+  <div class="row">
+    <div class="col">{{ en | markdownify }}</div>
+    <div class="col">{{ zh | markdownify }}</div>
+  </div>
+  {%- else %}
+  {{ body | markdownify }}
+  {%- endif %}
+</section>
+{%- endif %}

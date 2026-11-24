@@ -117,3 +117,15 @@ section.emph1 .red, section.emph1 .green { color: inherit; font-weight: 700; }
   font-size: 13px;
 }
 .site-footer p { margin: 2px 0; }
+
+/* Release list on the download page. */
+.release-head { padding-top: 16px; padding-bottom: 16px; }
+.release-head h2, .release-head h3 { margin: 0; }
+.release-head p { margin: .2em 0; }
+.release-head ul.assets { list-style: none; padding: 0; margin: .3em 0 0; }
+.release-head ul.assets li { display: inline-block; margin-right: 1.5em; }
+.release-notes h1, .release-notes h2 { font-size: 21px; margin: 1em 0 .3em; }
+.release-notes h3, .release-notes h4 { font-size: 17px; margin: 1em 0 .3em; }
+.release-notes table { border-collapse: collapse; margin: .6em 0; }
+.release-notes th, .release-notes td { border: 1px solid #ccc; padding: 4px 10px; }
+.release-notes ul ul { list-style-type: circle; }

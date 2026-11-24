@@ -5,6 +5,8 @@ description: A terminal forked from PuTTY by piaip
 baseurl: "/pietty"
 url: "https://hungte.github.io"
 lang: zh-Hant
+# Used by jekyll-github-metadata (site.github.releases) on the download page.
+repository: hungte/pietty
 
 markdown: kramdown
 kramdown:
