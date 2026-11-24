@@ -61,6 +61,18 @@ class JekyllInclude < Liquid::Tag
 end
 Liquid::Template.register_tag('include', JekyllInclude)
 
+# Rough stand-in for jekyll-seo-tag's {% seo %}.
+class SeoTag < Liquid::Tag
+  def render(context)
+    site = context['site']
+    page = context['page']
+    title = page['title'] ? "#{page['title']} | #{site['title']}" : "#{site['title']} | #{site['description']}"
+    desc = page['description'] || site['description']
+    %(<title>#{title}</title>\n  <meta name="description" content="#{desc}">)
+  end
+end
+Liquid::Template.register_tag('seo', SeoTag)
+
 def releases(refresh)
   cache = File.join(ROOT, '_raw', 'releases.json')
   if refresh || !File.exist?(cache)

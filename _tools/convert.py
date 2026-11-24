@@ -22,7 +22,7 @@ IMG_DIR = os.path.join(ROOT, 'assets', 'images')
 
 PAGES = [
     # (raw name, output file, title, permalink)
-    ('home', 'index.md', 'HOME', '/'),
+    ('home', 'index.md', None, '/'),
     # download.html is now generated from GitHub Releases; not converted.
     ('faq', 'faq.md', 'FAQ', '/faq.html'),
 ]
@@ -262,7 +262,8 @@ def convert(raw, out_name, title, permalink):
 
   body = '\n\n'.join(chunks)
   # The page-level header on home is shown by the layout instead.
-  front = f'---\nlayout: default\ntitle: {title}\npermalink: {permalink}\n---\n\n'
+  title_line = f'title: {title}\n' if title else ''
+  front = f'---\nlayout: default\n{title_line}permalink: {permalink}\n---\n\n'
   with open(os.path.join(ROOT, out_name), 'w', encoding='utf-8') as f:
     f.write(front + body + '\n')
   print('wrote', out_name, file=sys.stderr)

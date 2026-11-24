@@ -8,6 +8,13 @@ lang: zh-Hant
 # Used by jekyll-github-metadata (site.github.releases) on the download page.
 repository: hungte/pietty
 
+author: Hung-Te Lin (piaip)
+
+# Both plugins are supported (whitelisted) on GitHub Pages.
+plugins:
+  - jekyll-seo-tag    # <title>, description, canonical URL, Open Graph.
+  - jekyll-sitemap    # /sitemap.xml for Google Search Console.
+
 markdown: kramdown
 kramdown:
   input: GFM
