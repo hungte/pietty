@@ -33,3 +33,10 @@ exclude:
   - _raw
   - _tools
   - _preview
+
+defaults:
+  # Keep the Google Search Console verification file out of sitemap.xml.
+  - scope:
+      path: "google*.html"
+    values:
+      sitemap: false
