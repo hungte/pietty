@@ -4,11 +4,21 @@ title: DOWNLOAD
 permalink: /download.html
 ---
 
+<section class="title" markdown="1">
+
 # PieTTY Releases
+
+</section>
+
+<section class="emph1" markdown="1">
 
 ### [PieTTY 0.4.16](https://github.com/hungte/pietty/releases/tag/0.4.16)
 
 Release date: Nov 23 2026<br>x86 (32bit): [pietty-0.4.16-win32.zip](https://github.com/hungte/pietty/releases/download/0.4.16/pietty-0.4.16-win32.zip)<br>x64 (64bit): [pietty-0.4.16-win64.zip](https://github.com/hungte/pietty/releases/download/0.4.16/pietty-0.4.16-win64.zip)
+
+</section>
+
+<section class="plain" markdown="1">
 
 <div class="row" markdown="1">
 
@@ -44,9 +54,17 @@ Created by **priv**, PieTTY 0.4.16 fixes color rendering, paste, and mouse track
 
 </div>
 
+</section>
+
+<section class="emph1" markdown="1">
+
 ### [PieTTY 0.4.15](https://github.com/hungte/pietty/releases/tag/0.4.15) (build 1)
 
 Release date: Nov 22 2026<br>x86 (32bit): [pietty-0.4.15-build1-win32.zip](https://github.com/hungte/pietty/releases/download/0.4.15/pietty-0.4.15-build1-win32.zip)<br>x64 (64bit): [pietty-0.4.15-build1-win64.zip](https://github.com/hungte/pietty/releases/download/0.4.15/pietty-0.4.15-build1-win64.zip)
+
+</section>
+
+<section class="plain" markdown="1">
 
 <div class="row" markdown="1">
 
@@ -78,6 +96,10 @@ Created by **priv**, updates the multilingual Windows SSH client from the 0.4b14
 
 </div>
 
+</section>
+
+<section class="emph1" markdown="1">
+
 ### [PieTTY 0.4.00b14](https://github.com/hungte/pietty/releases/download/0.4.0b14/pietty0400b14.zip)
 
 Release date: Nov 22 2010
@@ -85,6 +107,10 @@ Release date: Nov 22 2010
 MD5: f42ecd57e924fd3f39e808fa11f61154  pietty0400b14.zip
 
 c5fd4b6546088b3061adb406a44272b2  pietty0400b14.exe
+
+</section>
+
+<section class="plain" markdown="1">
 
 <div class="row" markdown="1">
 
@@ -138,6 +164,10 @@ c5fd4b6546088b3061adb406a44272b2  pietty0400b14.exe
 
 </div>
 
+</section>
+
+<section class="emph1" markdown="1">
+
 ### [PieTTY 0.3.27](https://github.com/hungte/pietty/releases/download/0.3.27/pietty0327.exe)
 
 Release date: Jun 14 2005
@@ -145,6 +175,10 @@ Release date: Jun 14 2005
 Final release of 0.3 series
 
 MD5: 1533c60d6a9fda4715eaf88d89c05dc0
+
+</section>
+
+<section class="plain" markdown="1">
 
 - <span class="red">若您不需要 SCP 功能，建議您改用 0.4 系列</span>
 - URL 相關(跨行顯示與其它)修正
@@ -177,21 +211,37 @@ MD5: 1533c60d6a9fda4715eaf88d89c05dc0
 - 漢字轉換的表格由於簡化字與正體字一對多的關係，之前使用 autrijus 的 perl 表格時似乎沒把優先順序問題處理好， 使用時請自行小心，以後的版本會再人工審閱。 目前已知轉換不良的字: 鬆 盃 (fixed in 0.4)
 - 對於某些 codepage 的 Windows, 第一次執行會變成黑底黑字... 請先選 codepage 為 UTF8 或 System default etc. (fixed in 0.4)
 
+</section>
+
+<section class="emph1" markdown="1">
+
 ### PieTTY 0.3.25
 
 Release date: Apr 06 2005
 
 Download link is deprecated.
 
+</section>
+
+<section class="plain" markdown="1">
+
 - Based on PuTTY 0.58 Release
 - Imported latest PuTTY Unicode 4.0 width table
 - Fixed cross-line href supporting
+
+</section>
+
+<section class="emph1" markdown="1">
 
 ### PieTTY 0.3.23
 
 Release date: 03/25/2005
 
 Download link is deprecated.
+
+</section>
+
+<section class="plain" markdown="1">
 
 - Support Copy with AnsiSeq 剪貼ANSI控制碼
 - Blur shadow effect
@@ -205,11 +255,19 @@ Download link is deprecated.
 - Moved some global options to sessions
 - Fixed 0.3.20 Big5Kana code error: like '觀'
 
+</section>
+
+<section class="emph1" markdown="1">
+
 ### PieTTY 0.3.20
 
 Release date: Mar 16 2005
 
 Download link is deprecated.
+
+</section>
+
+<section class="plain" markdown="1">
 
 - Performance Tuning: stable, smooth, and faster than ever!
 - Href now with hover,cursor color option, and broken line support
@@ -230,11 +288,19 @@ Download link is deprecated.
 - fixed bug: session with common names
 - fixed bug: title always have ' - PieTTY'
 
+</section>
+
+<section class="emph1" markdown="1">
+
 ### PieTTY 0.3.11
 
 Release date: Feb 27 2005
 
 Download link is deprecated.
+
+</section>
+
+<section class="plain" markdown="1">
 
 <div class="row" markdown="1">
 
@@ -262,11 +328,19 @@ Download link is deprecated.
 
 </div>
 
+</section>
+
+<section class="emph1" markdown="1">
+
 ### [PieTTY 0.3](https://github.com/hungte/pietty/releases/download/0.3/pietty03.exe)
 
 Release date: Feb 22 2005
 
 MD5: 3bed2a91213735d10d0a26a12cee2f46
+
+</section>
+
+<section class="plain" markdown="1">
 
 <div class="row" markdown="1">
 
@@ -284,7 +358,15 @@ PieTTY 的第一個版本，主要以中文修正與架構改變為主，但無�
 
 </div>
 
+</section>
+
+<section class="emph1" markdown="1">
+
 ## Legacy Non-PieTTY Builds
+
+</section>
+
+<section class="emph2" markdown="1">
 
 ## pputty 0.24 final (Mar 03 2005)
 
@@ -328,3 +410,5 @@ pputty 0.2.3 的源碼(Source) 於 2004 夏天就不再修改，這裡提供了�
 ## 中文透明 Putty
 
 很早前我做的版本，有中文、透明化，原始碼弄不見了所以不再更新。
+
+</section>

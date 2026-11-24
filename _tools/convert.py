@@ -208,6 +208,23 @@ def tile_md(tile):
   return '\n\n'.join(p for p in parts if p.strip())
 
 
+# Google Sites section styles -> our CSS classes.
+SECTION_STYLES = [
+    ('O13XJf', 'hero'),     # Title with background image.
+    ('gk8rDe', 'title'),    # Title only.
+    ('lQAHbd', 'emph1'),    # Emphasis 1: dark blue background.
+    ('qeLZfd', 'emph2'),    # Emphasis 2: light grey background.
+]
+
+
+def section_class(sec):
+  classes = sec.get('class') or []
+  for gs, ours in SECTION_STYLES:
+    if gs in classes:
+      return ours
+  return 'plain'
+
+
 def convert(raw, out_name, title, permalink):
   CURRENT_PAGE[0] = raw
   # Image URLs are only valid together with the session cookie of the page
@@ -235,11 +252,13 @@ def convert(raw, out_name, title, permalink):
     if 'Canonical URL' in text and 'Copyright' in text:
       continue  # Footer: moved into the layout.
     if len(rendered) == 1:
-      chunks.append(rendered[0])
+      inner = rendered[0]
     else:
       cols_html = '\n\n'.join(
           f'<div class="col" markdown="1">\n\n{r}\n\n</div>' for r in rendered)
-      chunks.append(f'<div class="row" markdown="1">\n\n{cols_html}\n\n</div>')
+      inner = f'<div class="row" markdown="1">\n\n{cols_html}\n\n</div>'
+    chunks.append(f'<section class="{section_class(sec)}" markdown="1">\n\n'
+                  f'{inner}\n\n</section>')
 
   body = '\n\n'.join(chunks)
   # The page-level header on home is shown by the layout instead.

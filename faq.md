@@ -4,7 +4,13 @@ title: FAQ
 permalink: /faq.html
 ---
 
+<section class="title" markdown="1">
+
 # FAQ
+
+</section>
+
+<section class="plain" markdown="1">
 
 ### Q: Why is this FAQ only available in Chinese?
 
@@ -92,6 +98,10 @@ PieTTY 還加上了輕易切換字元編碼(encoding) 的設計，對 CJK 語系
 
 呃，這類非常 BBS 導向的問題我會放在最後處理。 PuTTY 比其它軟體強大的地方在於它對標準支援非常好， 所以我登入各種 UNIX 主機用它又快又正確，而 BBS 通常標準都亂做 (我可以找到 ptt bbs 的人幫我背書這事^^;) ，所以不會是我改 PuTTY 的主要方向。 分頁是個比較獨立的議題，我本身拿 PuTTY 是連到工作站用，所以都用 screen， 一個窗就夠了。 PuTTY 的架構確實也是改多窗超麻煩。 所以同樣等我哪天發呆太久覺得無聊才可能去做。
 
+</section>
+
+<section class="plain" markdown="1">
+
 ### Q: PieTTY 不是號稱可以顯示多國語言？ 怎麼我還是跑出方塊來？
 
 為求效率， PieTTY 預設只會使用你系統的預設字型顯示設定， (如在一般中文 Windows 上多半系統設定為可顯示中日文， 但韓文則會顯示為方塊或空白; 若設定系統預設為英文模式， 可能連中文都變方塊了);
@@ -99,6 +109,10 @@ PieTTY 還加上了輕易切換字元編碼(encoding) 的設計，對 CJK 語系
 若要同時顯示更多種文字而在你的系統上會顯示出方塊或無法顯示， (當然前提是你要有正確的字型) 你可以重新設定字型或是使用 PieTTY 選項內的 "Multilingual Engine (多國語言顯示方式)" 設定，目前提供 Uniscribe 跟 MLang 兩種， 速度及效果各有不同，請照您的需求選用。
 
 Uniscribe 的速度比較快，可是配某些字型似乎會發生大小不太合的狀況； MLang 是最慢的，但它的效果比 Uniscribe 好一些。
+
+</section>
+
+<section class="plain" markdown="1">
 
 <div class="row" markdown="1">
 
@@ -110,7 +124,7 @@ Uniscribe 的速度比較快，可是配某些字型似乎會發生大小不太�
 
 <div class="col" markdown="1">
 
-![]({{ "/assets/images/faq-1-75dba59e.png" | relative_url }})
+![]({{ "/assets/images/faq-1-1e2cc2a1.png" | relative_url }})
 
 </div>
 
@@ -122,11 +136,15 @@ Uniscribe 的速度比較快，可是配某些字型似乎會發生大小不太�
 
 <div class="col" markdown="1">
 
-![]({{ "/assets/images/faq-2-03f192b7.png" | relative_url }})
+![]({{ "/assets/images/faq-2-a7a972cf.png" | relative_url }})
 
 </div>
 
 </div>
+
+</section>
+
+<section class="plain" markdown="1">
 
 ### Q: Unicode 補完 ！難道你沒看過 [「Unicode補完計畫 ─ 你真的知道它在做什麼嗎？」](http://ku.myftp.org/index_2005Q1.htm#18) 嗎？
 
@@ -154,6 +172,10 @@ PieTTY 用的環境是 Telnet/SSH。 這個世界多半是 ANSI/Multibyte Based 
 
 有幾個原因: 首先，裝 Unicode-at-on 要管理者權限，又要重開機。 再來，有的軟體/標準本身就能處理 Unicode (如 HTML/HTTP)， 所以 Unicode-at-on 那種影響整個系統的方式有時會造成反效果。 以現在常用的 Windows XP 來說，它本身的 Unicode 支援就不錯， 一般常見上網需求除了 Telnet/SSH 仍是 ANSI 外，其它各種協定軟體多半 都是有 Unicode 的，所以 PieTTY 選擇支援 Unicode 補完計畫， 讓人可以只滿足這部份的需求。
 
+</section>
+
+<section class="plain" markdown="1">
+
 ### Q: 你根本不懂 telnet 吧，為什麼要選 PuTTY? xxMAN 好多了...
 
 正好相反，我想我是有資格講話的，各大 terminal software 我大概都玩過， 國內國外從 NetTerm, ptelnet, BBSTerm, MultiTerm, ... 以前我還寫過完整的評鑑， 後來自己寫了一隻 pssh/ytelnet ， 再後來賣給 KKMan(所以我是少數有立場可以說 KKMAN 怎樣怎樣的人), ... 我想我比很多只能事後背歷史的人強多了，起碼在大學時期， 台灣 BBS 的演進過程我可是參與並影響不少的。 不過這已經是老人講古了... 一直到後期所謂 PCMan 一類出現時我已經淡出了， 回頭看這些連線軟體的戰爭我無意再去筆戰，你覺得別的軟體好就去用別的吧 :)
@@ -163,6 +185,10 @@ PieTTY 用的環境是 Telnet/SSH。 這個世界多半是 ANSI/Multibyte Based 
 有人問我上面所謂缺點是哪些？ 以我的需求來說: (1) SSH. (2) Good vt100+xterm support for both display and kbd input, like PageUp. (3) fully implemention of RFC telnet protocol. Most TW terms cannot work with FreeBSD 4.X. (4) No "install" process, small and standalone. (5) Large and wide terminal , like 90x50 (6) Fast rendering (7) better if open source.
 
 很大的因素是我用這種軟體不是拿來只玩 BBS 的，我需要拿來跟各種 (UNIX mostly) 系統連線，所以半調子的 terminal support 是不行的。 別的不說， 滿螢幕的超大 TERM 目前常看到的幾隻程式都處理的不好 (netterm 除外)。 SSH 跟免費+open source當然也是重要因素。 Open source 好處就在於作者不理你時 可以自己重做一隻，就像我現在一樣...
+
+</section>
+
+<section class="plain" markdown="1">
 
 ### 你 Close Source! 這樣不行啊！
 
@@ -177,3 +203,5 @@ PieTTY 用的環境是 Telnet/SSH。 這個世界多半是 ANSI/Multibyte Based 
 ### pputty 有源碼 Source 可以抓嗎？
 
 我會以 diff-patch 的形式發行，因為我希望能一直使用最新的 PuTTY 做 backend。 但每隔一段時間才會整理。 目前已提供 pputty 0.2.4 final 的源碼，請至下載頁下載。
+
+</section>

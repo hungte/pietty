@@ -4,6 +4,8 @@ title: HOME
 permalink: /
 ---
 
+<section class="hero" markdown="1">
+
 <div class="row" markdown="1">
 
 <div class="col" markdown="1">
@@ -16,11 +18,15 @@ permalink: /
 
 <div class="col" markdown="1">
 
-![]({{ "/assets/images/home-1-2a204741.jpg" | relative_url }})
+![]({{ "/assets/images/home-1-7aa6718d.jpg" | relative_url }})
 
 </div>
 
 </div>
+
+</section>
+
+<section class="plain" markdown="1">
 
 <div class="row" markdown="1">
 
@@ -34,7 +40,7 @@ PieTTY (previously pputty) is a free SSH client based on [PuTTY](http://www.chia
 
 <div class="col" markdown="1">
 
-![]({{ "/assets/images/home-2-6bd306e3.png" | relative_url }})
+![]({{ "/assets/images/home-2-5992be02.png" | relative_url }})
 
 </div>
 
@@ -47,6 +53,10 @@ PieTTY (previously pputty) is a free SSH client based on [PuTTY](http://www.chia
 </div>
 
 </div>
+
+</section>
+
+<section class="emph1" markdown="1">
 
 <div class="row" markdown="1">
 
@@ -71,6 +81,10 @@ PieTTY (previously pputty) is a free SSH client based on [PuTTY](http://www.chia
 </div>
 
 </div>
+
+</section>
+
+<section class="plain" markdown="1">
 
 <div class="row" markdown="1">
 
@@ -132,6 +146,10 @@ PieTTY (previously pputty) is a free SSH client based on [PuTTY](http://www.chia
 
 </div>
 
+</section>
+
+<section class="emph2" markdown="1">
+
 <div class="row" markdown="1">
 
 <div class="col" markdown="1">
@@ -155,6 +173,10 @@ PieTTY 是我當年連線到 Solaris 工作站上的必需品。 如果對這個
 </div>
 
 </div>
+
+</section>
+
+<section class="plain" markdown="1">
 
 <div class="row" markdown="1">
 
@@ -181,3 +203,5 @@ Starting from 0.4, we have more developers contributed to the PieTTY project:
 </div>
 
 </div>
+
+</section>
