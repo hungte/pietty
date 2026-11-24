@@ -1,0 +1,26 @@
+# Rebuild the GitHub Pages site whenever a release is published or changed,
+# so the download page (generated from GitHub Releases) stays up to date.
+#
+# Copy this file to .github/workflows/pages-rebuild.yml on the default branch
+# of hungte/pietty. Note: for "release" events GitHub runs the workflow file
+# from the commit the release tag points to, so it only fires for tags created
+# after this file is on the default branch. Use "Run workflow" (manual
+# dispatch) for anything else.
+name: Rebuild GitHub Pages
+
+on:
+  release:
+    types: [published, edited, deleted]
+  workflow_dispatch:
+
+permissions:
+  pages: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request a Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
