@@ -1,1 +1,1 @@
-This is the repository for binary releases of the [PieTTY project](https://sites.google.com/view/pietty-project/home).
+This is the repository for binary releases of the [PieTTY project](http://hungte.github.io/pietty).
