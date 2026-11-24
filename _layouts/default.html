@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.title != 'HOME' %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header" style="background-image: url('{{ '/assets/images/header.jpg' | relative_url }}');">
+    <div class="bar">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav>
+        {% for item in site.nav %}
+        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="active"{% endif %}>{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="content">
+{{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>Canonical URL: <a href="http://ntu.csie.org/~piaip/pietty">http://ntu.csie.org/~piaip/pietty</a></p>
+    <p>Copyright 2017 Hung-Te Lin. All rights reserved.</p>
+  </footer>
+</body>
+</html>

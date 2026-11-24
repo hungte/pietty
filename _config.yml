@@ -1,0 +1,26 @@
+title: PieTTY project
+description: A terminal forked from PuTTY by piaip
+# Served as https://hungte.github.io/pietty/ (project page of hungte/pietty).
+# Set baseurl to "" if you use a custom domain or a user site instead.
+baseurl: "/pietty"
+url: "https://hungte.github.io"
+lang: zh-Hant
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+nav:
+  - title: HOME
+    url: /
+  - title: DOWNLOAD
+    url: /download.html
+  - title: FAQ
+    url: /faq.html
+
+exclude:
+  - README.md
+  - _raw
+  - _tools
+  - _preview

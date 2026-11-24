@@ -1,0 +1,93 @@
+:root {
+  --fg: #212121;
+  --muted: #5f6368;
+  --accent: #3d5c7a;
+  --border: #e0e0e0;
+  --max: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--fg);
+  font: 16px/1.65 Lato, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
+        Arial, sans-serif;
+  background: #fff;
+}
+
+a { color: var(--accent); }
+
+/* Header: banner image with site title and navigation. */
+.site-header {
+  background-size: cover;
+  background-position: center;
+}
+.site-header .bar {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.site-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #202124;
+  text-decoration: none;
+  background: rgba(255, 255, 255, .75);
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+.site-header nav a {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 6px 12px;
+  color: #202124;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-decoration: none;
+  background: rgba(255, 255, 255, .75);
+  border-radius: 4px;
+}
+.site-header nav a.active,
+.site-header nav a:hover { background: #fff; color: var(--accent); }
+
+/* Main content. */
+.content {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px;
+}
+.content h1 { font-size: 2.2rem; margin: .4em 0; }
+.content h2 { font-size: 1.5rem; margin: 1.2em 0 .4em; color: var(--accent); }
+.content h3 { font-size: 1.2rem; margin: 1.2em 0 .3em; }
+.content img { max-width: 100%; height: auto; }
+.content ul { list-style-type: square; padding-left: 1.4em; }
+.content code { font-family: Consolas, "Source Code Pro", monospace; }
+
+/* Side-by-side columns (e.g. English | 中文), stacked on small screens. */
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0 40px;
+  align-items: start;
+  margin: 8px 0 16px;
+}
+.col > :first-child { margin-top: .4em; }
+
+.red { color: #ff0000; }
+.green { color: #008000; }
+
+.site-footer {
+  max-width: var(--max);
+  margin: 32px auto 0;
+  padding: 16px 24px 32px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: .9rem;
+}
+.site-footer p { margin: 4px 0; }
