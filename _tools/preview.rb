@@ -95,6 +95,7 @@ layout = File.read(File.join(ROOT, '_layouts', 'default.html'))
 FileUtils.rm_rf(OUT)
 FileUtils.mkdir_p(OUT)
 FileUtils.cp_r(File.join(ROOT, 'assets'), OUT)
+FileUtils.cp(File.join(ROOT, 'favicon.ico'), OUT)
 
 %w[index.md download.html faq.md].each do |file|
   meta, body = split_front_matter(File.read(File.join(ROOT, file)))
